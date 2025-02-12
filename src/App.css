@@ -1,0 +1,188 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Общий контейнер */
+.store-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Контейнер контента (чтобы не влиял на кнопку) */
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 60px; /* Добавляем отступ, чтобы кнопка не наслаивалась */
+}
+
+
+/* Отдельный контейнер для кнопки (НЕ зависящий от списка/карточек) */
+.switch-container {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Фиксируем справа сверху */
+  z-index: 100;
+}
+
+.icon-switch {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 32px;
+}
+
+.icon-switch img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.icon-switch img:hover {
+  opacity: 1;
+}
+
+/* Карточки (Grid View) */
+.cards-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.shop-card {
+  width: 280px;
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-card h3,
+.shop-card p {
+  color: black;
+}
+
+.shop-card img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.shop-card .price {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shop-card .description {
+  color: black;
+  font-size: 14px;
+}
+
+.add-to-cart {
+  border: 1px solid red;
+  background: white;
+  color: red;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background: red;
+  color: white;
+}
+
+/* Список (List View) */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Элемент списка */
+.shop-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f0f0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Изображение */
+.shop-item img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Контейнер информации */
+.shop-item-info {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+/* Название товара */
+.shop-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Цвет товара */
+.shop-item p {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Цена */
+.shop-item .price {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* Кнопка */
+.shop-item .add-to-cart {
+  white-space: nowrap;
+}
+
+.shop-card h3,
+.shop-item h3 {
+  text-transform: uppercase;
+}
+
+/* Цвет товара (курсив) */
+.shop-card .color,
+.shop-item .color {
+  font-style: italic;
+}
